@@ -17,14 +17,15 @@ $("#3pm").val(localStorage.getItem("3pm"));
 $("#4pm").val(localStorage.getItem("4pm"));
 $("#5pm").val(localStorage.getItem("5pm"));
 //var startTime = "09:00";
-var $time = moment().format("H");
+var $time = moment().format("H"); //Displays current time
+console.log("$time is" + $time);
 var $currentDayTime = $("#currentDay").text(moment().format('LLLL'));
 var $saveBtn = $(".saveBtn");
 var $currentHour = $(".hour");
 //var $nineAM = moment($currentHour.get(0).innerHTML , 'H:mma');
 
 // Converting time to military to compare
-var $currentTime = moment().add( 21, 'H').hours();
+var $currentTime = moment().format("H");
 var $9am = moment($currentHour.get(0).innerHTML , 'H').format("H");
 var $10am =  moment($currentHour.get(1).innerHTML , 'H:mma').format("H");
 var $11am = moment($currentHour.get(2).innerHTML , 'H:mma').format("H");
