@@ -16,13 +16,13 @@ $("#2pm").val(localStorage.getItem("2pm"));
 $("#3pm").val(localStorage.getItem("3pm"));
 $("#4pm").val(localStorage.getItem("4pm"));
 $("#5pm").val(localStorage.getItem("5pm"));
-//var startTime = "09:00";
+
 var $time = moment().format("H"); //Displays current time
 console.log("$time is" + $time);
 var $currentDayTime = $("#currentDay").text(moment().format('LLLL'));
 var $saveBtn = $(".saveBtn");
 var $currentHour = $(".hour");
-//var $nineAM = moment($currentHour.get(0).innerHTML , 'H:mma');
+
 
 // Converting time to military to compare
 var $currentTime = moment().format("H");
@@ -39,8 +39,6 @@ var $5pm = moment($currentHour.get(8).innerHTML ,'H:mma').format("H");
 
 $saveBtn.on("click" , function(){
     console.log("Save() started");
-    // var isafter = moment().isAfter($fivePM);
-    // console.log(isafter);
     localStorage.setItem("9am", $("#9am").val());
     localStorage.setItem("10am", $("#10am").val());
     localStorage.setItem("11am", $("#11am").val());
@@ -50,18 +48,9 @@ $saveBtn.on("click" , function(){
     localStorage.setItem("3pm", $("#3pm").val());
     localStorage.setItem("4pm", $("#4pm").val());
     localStorage.setItem("5pm", $("#5pm").val());
-    // if(($currentHour.get(0).innerHTML) <= time.format(h)){
-    //         console.log("hello");
+
    console.log("I am edited  time: " + $currentTime);
    console.log("I am local time: "+ $time);
-   
-    // console.log($currentHour.get(0).innerHTML);
-//    var noon  = moment($currentHour.get(3).innerHTML, 'h:mma');
-//     var beginningTime = moment($currentHour.get(0).innerHTML, 'h:mma');
-//     var endTime = moment('10:00am', 'h:mma');
-//     console.log(beginningTime.isBefore(endTime)); 
-//     console.log(noon.isBefore(endTime)); 
-   
    if($1pm < $4pm ){
        console.log($9am);
    }
