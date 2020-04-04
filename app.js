@@ -8,6 +8,14 @@
 $(document).ready(function(){
 //localStorage.getItem("9am");
 $("#9am").val(localStorage.getItem("9am"));
+$("#10am").val(localStorage.getItem("10am"));
+$("#11am").val(localStorage.getItem("11am"));
+$("#12pm").val(localStorage.getItem("12pm"));
+$("#1pm").val(localStorage.getItem("1pm"));
+$("#2pm").val(localStorage.getItem("2pm"));
+$("#3pm").val(localStorage.getItem("3pm"));
+$("#4pm").val(localStorage.getItem("4pm"));
+$("#5pm").val(localStorage.getItem("5pm"));
 var $time  = moment();
 var $currentTime = $("#currentDay").text($time.format("h:mm:ss a M/DD/YYYY"));
 var $saveBtn = $(".saveBtn");
@@ -23,15 +31,21 @@ var $fourPM = moment($currentHour.get(7).innerHTML , 'h:mma');
 var $fivePM = moment($currentHour.get(8).innerHTML ,'h:mma');
 var $current = moment().format("hA");
 var $nine = $nineAM.format("hA");
-console.log("$nine is :" + $nine);
-console.log("9am is : " + $nineAM);
-console.log("Current time is : " + $current);
+console.log("$nine is :" + $nine);// output in 9am
+console.log("Current time is : " + $current); //output is 4pm
 $saveBtn.on("click" , function(){
     console.log("Save() started");
     // var isafter = moment().isAfter($fivePM);
     // console.log(isafter);
-    console.log($("#9am").val());
     localStorage.setItem("9am", $("#9am").val());
+    localStorage.setItem("10am", $("#10am").val());
+    localStorage.setItem("11am", $("#11am").val());
+    localStorage.setItem("12pm", $("#12pm").val());
+    localStorage.setItem("1pm", $("#1pm").val());
+    localStorage.setItem("2pm", $("#2pm").val());
+    localStorage.setItem("3pm", $("#3pm").val());
+    localStorage.setItem("4pm", $("#4pm").val());
+    localStorage.setItem("5pm", $("#5pm").val());
     // if(($currentHour.get(0).innerHTML) <= time.format(h)){
     //         console.log("hello");
    
@@ -42,6 +56,7 @@ $saveBtn.on("click" , function(){
 //     var endTime = moment('10:00am', 'h:mma');
 //     console.log(beginningTime.isBefore(endTime)); 
 //     console.log(noon.isBefore(endTime)); 
+
     
 }); 
 });
